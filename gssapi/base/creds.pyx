@@ -157,7 +157,8 @@ def acquireCred(Name name, ttl=0, mechs=None, cred_usage='both'):
         raise GSSError(maj_stat, min_stat)
 
 
-def acquireCredImpersonateName(Creds impersonator_cred, Name name, ttl=0,
+def acquireCredImpersonateName(Creds impersonator_cred not None,
+                               Name name not None, ttl=0,
                                mechs=None, cred_usage='initiate'):
     """
     acquireCredImpersonateName(impersonator_cred, name, ttl=0, mechs=None, cred_usage='initiate') -> (Creds, [MechType], int)
